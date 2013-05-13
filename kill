@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-pid = `ruby pid.rb`.chomp
+pid = `ruby pid`.chomp
 
 if pid.empty?
   puts "process is already dead"

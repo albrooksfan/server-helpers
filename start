@@ -8,7 +8,7 @@ unless ARGV.empty?
   log_file = ARGV.shift.chomp
 end
 
-pid = `./pid.rb`.chomp
+pid = `./pid`.chomp
 
 unless pid.empty?
   puts "server already running [#{pid}]"
@@ -17,6 +17,6 @@ end
 
 `nohup ./run.sh >> #{log_file} 2>&1 &`
 
-port = `./port.rb`.chomp
+port = `./port`.chomp
 
 puts "starting server on #{port}"

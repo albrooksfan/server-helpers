@@ -15,7 +15,7 @@ unless pid.empty?
   exit
 end
 
-`nohup ./run.sh >> #{log_file} 2>&1 &`
+`nohup ./run >> #{log_file} 2>&1 &`
 
 port = `./port`.chomp
 
